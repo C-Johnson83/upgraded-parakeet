@@ -52,8 +52,13 @@ function scribbleDown(data) {
     if (shapeChoice === 'Triangle') {
         shapeOutput = new Triangle();
         shapeString += `<polygon points="150, 18 244, 182 56, 182" fill="${data.shapeColor}"/>`;
-
-    }
+    } else if (shapeChoice === 'Circle') {
+        shapeOutput = new Circle();
+        shapeString += `<circle cx="25" cy="75" r="20" fill="${data.shapeColor}"/>`;
+    } else{
+        shapeOutput = new Square();
+        shapeString += `<rect x="10" y="10" width="30" height="30" fill="${data.shapeColor}"/>`
+    }    
 
 
         svgString = shapeString + end
@@ -61,11 +66,6 @@ function scribbleDown(data) {
     fs.writeFile("logo.svg", svgString, (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
     });
-
-    // test = toString(data)
-    // fs.writeFile("logo.svg", test, (err) => {
-    //     err ? console.log(err) : console.log("done did it");
-    // });
 }
     doItToIt();
     
