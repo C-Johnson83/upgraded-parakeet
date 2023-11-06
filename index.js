@@ -30,3 +30,14 @@ const questions = [
         name: "shapeColor",
     },
 ];
+
+function doItToIt() {
+    inq
+        .prompt(questions)
+        .then((data) => {
+            console.log(data)
+          
+        })
+}
+
+doItToIt();
