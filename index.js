@@ -56,10 +56,10 @@ function scribbleDown(data) {
         shapeString += `<polygon points="150, 18 244, 182 56, 182" fill="${data.shapeColor}"/>`;
     } else if (shapeChoice === 'Circle') {
         shapeOutput = new Circle();
-        shapeString += `<circle cx="150" cy="125" r="80" fill="${data.shapeColor}"/>`;
+        shapeString += `<circle cx="150" cy="115" r="80" fill="${data.shapeColor}"/>`;
     } else{
         shapeOutput = new Square();
-        shapeString += `<rect x="10" y="10" width="150" height="150" fill="${data.shapeColor}"/>`
+        shapeString += `<rect x="70" y="40" width="150" height="150" fill="${data.shapeColor}"/>`
     }    
 
 
