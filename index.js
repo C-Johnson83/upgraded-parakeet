@@ -21,7 +21,7 @@ const questions = [
     {
         type: "list",
         message: "What shape would you like the logo to be?",
-        choices: ["Triangle", "Circle, Square"],
+        choices: ["Triangle", "Circle", "Square"],
         name: "shape",
     },
     // Ask what color the shape should be
@@ -32,14 +32,22 @@ const questions = [
     },
 ];
 
+// function to prompt the user in the console
 function doItToIt() {
     inq
         .prompt(questions)
         .then((data) => {
             console.log(data)
-          
+          scribbleDown(data);
         })
     }
-    
+
+// function to write a file and save it
+function scribbleDown(data) {
+    test = toString(data)
+    fs.writeFile("logo.svg", test, (err) => {
+        err ? console.log(err) : console.log("done did it");
+    });
+}
     doItToIt();
     
