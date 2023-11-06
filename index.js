@@ -62,7 +62,7 @@ function scribbleDown(data) {
 
 
         svgString = shapeString + end
-           // Create a   svg file with the users shape choice and text
+           // Create an svg file with the users shape, text, and color choices
     fs.writeFile("logo.svg", svgString, (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
     });
