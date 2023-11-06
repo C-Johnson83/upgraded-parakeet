@@ -44,7 +44,7 @@ function doItToIt() {
 
 // function to write a file and save it
 function scribbleDown(data) {
-    let shapeString = '<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg"><g>';// the g tag allows grouping of SVG elements. This is used to overlay the text on the shape
+    let shapeString = '<svg width="300" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg"><g>';// the g tag allows grouping of SVG elements. This is used to overlay the text on the shape
     let end = '</svg>'; // to close the svg element
     let shapeChoice = `${data.shape}`
     let shapeOutput;
