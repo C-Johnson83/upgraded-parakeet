@@ -48,7 +48,9 @@ function scribbleDown(data) {
     let end = '</svg>';
     let shapeChoice = `${data.shape}`
     let shapeOutput;
-
+    let userText = `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${data.textColor}">${data.text}</text>`;
+    console.log(userText)
+    
     if (shapeChoice === 'Triangle') {
         shapeOutput = new Triangle();
         shapeString += `<polygon points="150, 18 244, 182 56, 182" fill="${data.shapeColor}"/>`;
@@ -61,7 +63,7 @@ function scribbleDown(data) {
     }    
 
 
-        svgString = shapeString + end
+        svgString = shapeString+ userText + end
            // Create an svg file with the users shape, text, and color choices
     fs.writeFile("logo.svg", svgString, (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
