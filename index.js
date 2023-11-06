@@ -44,22 +44,22 @@ function doItToIt() {
 
 // function to write a file and save it
 function scribbleDown(data) {
-    let shapeString = '<svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">';
+    let shapeString = '<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg"><g>';
     let end = '</svg>';
     let shapeChoice = `${data.shape}`
     let shapeOutput;
-    let userText = `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${data.textColor}">${data.text}</text>`;
-    console.log(userText)
+    let userText = `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${data.textColor}">${data.text}</text></g>`;
+   
     
     if (shapeChoice === 'Triangle') {
         shapeOutput = new Triangle();
         shapeString += `<polygon points="150, 18 244, 182 56, 182" fill="${data.shapeColor}"/>`;
     } else if (shapeChoice === 'Circle') {
         shapeOutput = new Circle();
-        shapeString += `<circle cx="25" cy="75" r="20" fill="${data.shapeColor}"/>`;
+        shapeString += `<circle cx="150" cy="125" r="80" fill="${data.shapeColor}"/>`;
     } else{
         shapeOutput = new Square();
-        shapeString += `<rect x="10" y="10" width="30" height="30" fill="${data.shapeColor}"/>`
+        shapeString += `<rect x="10" y="10" width="150" height="150" fill="${data.shapeColor}"/>`
     }    
 
 
