@@ -48,18 +48,18 @@ function scribbleDown(data) {
     let end = '</svg>'; // to close the svg element
     let shapeChoice = `${data.shape}`
     let shapeOutput;
-    let userText = `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${data.textColor}">${data.text}</text></g>`; // sets text location and size and color and closes the group tag
+    let userText = `<text x="150" y="175" text-anchor="middle" font-size="60" fill="${data.textColor}">${data.text}</text></g>`; // sets text location and size and color and closes the group tag
    
     
     if (shapeChoice === 'Triangle') {
         shapeOutput = new Triangle();
-        shapeString += `<polygon points="150, 18 244, 182 56, 182" fill="${data.shapeColor}"/>`; // sets triangle size and color
+        shapeString += `<polygon points="150, 50 275, 250 25, 250" fill="${data.shapeColor}"/>`; // sets triangle size and color
     } else if (shapeChoice === 'Circle') {
         shapeOutput = new Circle();
-        shapeString += `<circle cx="150" cy="115" r="80" fill="${data.shapeColor}"/>`; // sets circle size and color
+        shapeString += `<circle cx="150" cy="150" r="125" fill="${data.shapeColor}"/>`; // sets circle size and color
     } else{
         shapeOutput = new Square();
-        shapeString += `<rect x="70" y="40" width="150" height="150" fill="${data.shapeColor}"/>` //sets square(rectangle) size and color
+        shapeString += `<rect x="25" rx="15" ry="15" y="25" width="250" height="250" fill="${data.shapeColor}"/>` //sets square(rectangle) size and color
     }    
 
     // combine all strings to make 1 SVG element
