@@ -2,6 +2,8 @@
 const inq = require('inquirer');
 const fs = require('fs');
 const { Triangle, Circle, Square } = require('./lib/shapes.js');
+const { availableParallelism } = require('os');
+
 
 // Create question array for prompt
 const questions = [
@@ -49,8 +51,14 @@ function scribbleDown(data) {
     let shapeChoice = `${data.shape}`
     let shapeOutput;
     let userText = `<text x="150" y="175" text-anchor="middle" font-size="60" fill="${data.textColor}">${data.text}</text></g>`; // sets text location and size and color and closes the group tag
-   
+   let gradientParams = `<defs> <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="red" /><stop offset="50%" stop-color="black" stop-opacity="0" /><stop offset="100%" stop-color="blue" /></linearGradient></defs>`
+    let gradient = 'url(#Gradient)'
     
+if (data.shapeColor === 'gradient') {
+    data.shapeColor = gradient
+    shapeString += gradientParams;
+}
+
     if (shapeChoice === 'Triangle') {
         shapeOutput = new Triangle();
         shapeString += `<polygon points="150, 50 275, 250 25, 250" fill="${data.shapeColor}"/>`; // sets triangle size and color
