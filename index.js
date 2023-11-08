@@ -29,10 +29,33 @@ const questions = [
     // Ask what color the shape should be
     {
         type: "input",
-        message: "Please choose a color for the shape. You may enter a color keyword, or use a hex code string",
+        message: "Please choose a color for the shape. You may enter a color keyword, a hex code string, or type gradient",
         name: "shapeColor",
     },
+      // Ask the type of gradient if condition is met
+  {
+    type: "list",
+    message: "Please choose the type of gradient for your shape",
+    name: "gradientType",
+    choices: ["Linear", "Radial"],
+    when: (answers) => answers.shapeColor === 'gradient',
+},
+  // Ask the first color of the shape gradient if condition is met
+  {
+    type: "input",
+    message: "Please choose the first color for the shape gradient. You may enter a color keyword or use a hex code string",
+    name: "gradientColor1",
+    when: (answers) => answers.shapeColor === 'gradient',
+},
+// Ask the second color of the shape gradient if condition is met
+{
+    type: "input",
+    message: "Please choose the second color for the shape gradient. You may enter a color keyword or use a hex code string",
+    name: "gradientColor2",
+    when: (answers) => answers.shapeColor === 'gradient',
+},
 ];
+
 
 // function to prompt the user in the console
 function doItToIt() {
@@ -51,11 +74,15 @@ function scribbleDown(data) {
     let shapeChoice = `${data.shape}`
     let shapeOutput;
     let userText = `<text x="150" y="175" text-anchor="middle" font-size="60" fill="${data.textColor}">${data.text}</text></g>`; // sets text location and size and color and closes the group tag
-   let gradientParams = `<defs> <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="red" /><stop offset="50%" stop-color="black" stop-opacity="0" /><stop offset="100%" stop-color="blue" /></linearGradient></defs>`
-    let gradient = 'url(#Gradient)'
+    let gradientParams = `<defs> <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="${data.gradientColor1}" /><stop offset="50%" stop-color="black" stop-opacity="0" /><stop offset="100%" stop-color="${data.gradientColor2}"/></linearGradient><radialGradient id="Gradient2" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75" spreadMethod="repeat"><stop offset="0%" stop-color="${data.gradientColor1}" /><stop offset="100%" stop-color="${data.gradientColor2}" /></radialGradient></defs>`
+    let gradient1 = 'url(#Gradient)'
+    let gradient2 = 'url(#Gradient2)'
     
-if (data.shapeColor === 'gradient') {
-    data.shapeColor = gradient
+if (data.shapeColor === 'gradient' && data.gradientType === 'Linear') {
+    data.shapeColor = gradient1
+    shapeString += gradientParams;
+} else if (data.shapeColor === 'gradient' && data.gradientType === 'Radial') {
+    data.shapeColor = gradient2
     shapeString += gradientParams;
 }
 
