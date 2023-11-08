@@ -73,8 +73,8 @@ function scribbleDown(data) {
     let end = '</svg>'; // to close the svg element
     let shapeChoice = `${data.shape}`
     let shapeOutput;
-    let userText = `<text x="150" y="175" text-anchor="middle" font-size="60" fill="${data.textColor}">${data.text}</text></g>`; // sets text location and size and color and closes the group tag
-    let gradientParams = `<defs> <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="${data.gradientColor1}" /><stop offset="50%" stop-color="black" stop-opacity="0" /><stop offset="100%" stop-color="${data.gradientColor2}"/></linearGradient><radialGradient id="Gradient2" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75" spreadMethod="repeat"><stop offset="0%" stop-color="${data.gradientColor1}" /><stop offset="100%" stop-color="${data.gradientColor2}" /></radialGradient></defs>`
+    let userText = `<text x="150" y="175" text-anchor="middle" font-size="60" fill="${data.textColor}" stroke="black">${data.text}</text></g>`; // sets text location and size and color and closes the group tag
+    let gradientParams = `<defs> <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="${data.gradientColor1}" /><stop offset="50%" stop-color="black" stop-opacity="0" /><stop offset="100%" stop-color="${data.gradientColor2}"/></linearGradient><radialGradient id="Gradient2" cx="0.5" cy="0.5" r="0.375" fx="0.75" fy="0.75" spreadMethod="repeat"><stop offset="0%" stop-color="${data.gradientColor1}" /><stop offset="100%" stop-color="${data.gradientColor2}" /></radialGradient></defs>`
     let gradient1 = 'url(#Gradient)'
     let gradient2 = 'url(#Gradient2)'
     
