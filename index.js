@@ -64,16 +64,16 @@ const questions = [
     // Ask the second color of the shape gradient if condition is met
     {
         type: "input",
-        message: "Please choose the middle color for the shape gradient. You may enter a color keyword or use a hex code string",
+        message: "Please choose the second color for the shape gradient. You may enter a color keyword or use a hex code string",
         name: "gradientColor2",
-        when: (answers) => answers.shapeColor === 'G' && answers.gradientType === "Linear",
+        when: (answers) => answers.shapeColor === 'G',
     },
     // Ask the third color of the shape gradient if condition is met
     {
         type: "input",
         message: "Please choose the last color for the shape gradient. You may enter a color keyword or use a hex code string",
         name: "gradientColor3",
-        when: (answers) => answers.shapeColor === 'G',
+        when: (answers) => answers.shapeColor === 'G' && answers.gradientType === "Linear",
     },
     // Ask if shape is to be outlined 
     {
@@ -107,8 +107,8 @@ function scribbleDown(data) {
     let shapeString = '<svg width="300" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg"><g>';// the g tag allows grouping of SVG elements. This is used to overlay the text on the shape
     let end = '</svg>'; // to close the svg element
     let shapeChoice = `${data.shape}`
-    let shapeOutput;
-    let userText = `<text x="150" y="185" text-anchor="middle" font-size="60" fill="${data.textColor}" stroke="${data.textOutlineColor}">${data.text}</text></g>`; // sets text location and size and color and closes the group tag
+    let shapeOutput = '';
+    let userText = `<text x="150" y="185" text-anchor="middle" font-size="80" fill="${data.textColor}" stroke="${data.textOutlineColor}">${data.text}</text></g>`; // sets text location and size and color and closes the group tag
     let gradientParams = `<defs>
                         <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
                         <stop offset="0%" stop-color="${data.gradientColor1}" />

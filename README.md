@@ -4,10 +4,12 @@ Module 10 challenge repository
 ## Description
 The upgraded-parakeet is a Node.js command-line application that allows users to generate custom SVG logos for their projects. Users can specify the text, text color, shape, and shape color to create unique logos without the need for a graphic designer.
 
-![Generated Logo](examples/example1.png)
-![Generated Logo](examples/example4.png)
-![Generated Logo](examples/example7.png)
-![Generated Logo](examples/example9.png)
+![Generated Logo](examples/example1.svg)
+![Generated Logo](examples/example2.svg)
+![Generated Logo](examples/example3.svg)
+![Generated Logo](examples/example4.svg)
+![Generated Logo](examples/example5.svg)
+![Generated Logo](examples/example6.svg)
 
 ## Table of Contents
 - [Installation](#installation)
