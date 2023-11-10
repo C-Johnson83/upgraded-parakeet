@@ -4,21 +4,49 @@ Module 10 challenge repository
 ## Description
 The upgraded-parakeet is a Node.js command-line application that allows users to generate custom SVG logos for their projects. Users can specify the text, text color, shape, and shape color to create unique logos without the need for a graphic designer.
 
+## Table of Contents
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Tests](#tests)
+- [Contributing](#contributing)
+- [License](#license)
+- [Walkthrough Video](#walkthrough-video)
+
+## User Story
+AS a freelance web developer  
+I WANT to generate a simple logo for my projects  
+SO THAT I don't have to pay a graphic designer
+
+## Acceptance Criteria
+GIVEN a command-line application that accepts user input  
+WHEN I am prompted for text  
+THEN I can enter up to three characters  
+WHEN I am prompted for the text color  
+THEN I can enter a color keyword (OR a hexadecimal number)  
+WHEN I am prompted for a shape  
+THEN I am presented with a list of shapes to choose from: circle, triangle, and square  
+WHEN I am prompted for the shape's color  
+THEN I can enter a color keyword (OR a hexadecimal number)  
+WHEN I have entered input for all the prompts  
+THEN an SVG file is created named `logo.svg`  
+AND the output text "Generated logo.svg" is printed in the command line  
+WHEN I open the `logo.svg` file in a browser  
+THEN I am shown a 300x200 pixel image that matches the criteria I entered
+
+## Mock Up
+![mock up](examples/10-oop-homework-demo.png)
+
+## Examples
+
 ![Generated Logo](examples/example1.svg)
 ![Generated Logo](examples/example2.svg)
 ![Generated Logo](examples/example3.svg)
 ![Generated Logo](examples/example4.svg)
 ![Generated Logo](examples/example5.svg)
 ![Generated Logo](examples/example6.svg)
-
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Walkthrough Video](#walkthrough-video)
-- [Tests](#tests)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 To install the upgraded-parakeet, follow these steps:
@@ -46,8 +74,9 @@ Provides a choice of shapes: circle, triangle, and square.
 Generates SVG logos that can be easily viewed in a web browser.  
 
 ## Tests
-The application includes unit tests for the Triangle, Circle, and Square classes. You can run the tests using Jest. To run the tests, use the following command:  
-npm test
+The application includes unit tests for the Triangle, Circle, and Square classes. You can run the tests using Jest. To run the tests, use the following command: 
+
+    npm test
 
 ## Contributing
 If you'd like to contribute to this project, please follow these guidelines:  
@@ -77,6 +106,7 @@ You can watch a walkthrough video demonstrating how to use the application and s
 ### Video example 1: original
 https://watch.screencastify.com/v/F8VOUnrzpKb4aR9cpN25
 ### Video example 2: gradient
+https://watch.screencastify.com/v/nm5nkjxAZEzAKjrPJMEh
 
 
 
