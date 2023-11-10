@@ -43,9 +43,6 @@ Supports custom text (up to three characters) and a wide range of colors.
 Provides a choice of shapes: circle, triangle, and square.  
 Generates SVG logos that can be easily viewed in a web browser.  
 
-## Walkthrough Video
-You can watch a walkthrough video demonstrating how to use the application and showcasing it's functionality by `[clicking here](#not yet)`. The video includes examples of the application in action, passing tests, and generating SVG logos.
-
 ## Tests
 The application includes unit tests for the Triangle, Circle, and Square classes. You can run the tests using Jest. To run the tests, use the following command:  
 npm test
@@ -68,7 +65,16 @@ Push to your created branch:
 Create a pull request with a detailed description of your changes.  
 
 ## License
+This project is licensed under the MIT license.  
+License Link  
+https://opensource.org/licenses/MIT   
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]  
 
+## Walkthrough Video
+You can watch a walkthrough video demonstrating how to use the application and showcasing it's functionality by clicking the link below. 
+### Video example 1: original
+https://watch.screencastify.com/v/F8VOUnrzpKb4aR9cpN25
+### Video example 2: gradient
 
 
 
