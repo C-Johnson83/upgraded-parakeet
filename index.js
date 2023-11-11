@@ -2,7 +2,6 @@
 const inq = require('inquirer');
 const fs = require('fs');
 const { Triangle, Circle, Square } = require('./lib/shapes.js');
-const { availableParallelism } = require('os');
 
 
 // Create question array for prompt
@@ -12,6 +11,13 @@ const questions = [
         type: "input",
         message: "Please enter the text you would like the logo to have? (three character limit)",
         name: "text",
+        validate: function (input) {
+            if (input.length > 3) {
+                return 'May only use up to 3 characters';
+            }
+            return true;
+        },
+    
     },
     // Ask what color text on the logo
     {
@@ -86,7 +92,7 @@ const questions = [
         type: "input",
         message: "Please choose the color of your shape outline. You may enter a color keyword, or use a hex code string",
         name: "shapeOutlineColor",
-        
+
         when: (answers) => answers.shapeOutline === 'Yes',
     },
 ];
@@ -97,10 +103,10 @@ function doItToIt() {
     inq
         .prompt(questions)
         .then((data) => {
-            console.log(data)
+            console.log(data);
             scribbleDown(data);
-        })
-}
+            })
+        }
 
 // function to write a file and save it
 function scribbleDown(data) {
