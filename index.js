@@ -13,7 +13,7 @@ const questions = [
         name: "text",
         validate: function (input) {
             if (input.length > 3) {
-                return 'May only use up to 3 characters';
+                return 'May only use up to 3 characters.\nPlease press backspace and try again';
             }
             return true;
         },
