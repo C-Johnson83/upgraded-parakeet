@@ -1,15 +1,15 @@
 <svg width="300" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><defs>
                         <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" stop-color="pink" />
-                        <stop offset="50%" stop-color="green" />
-                        <stop offset="100%" stop-color="purple"/>
+                        <stop offset="0%" stop-color="magenta" />
+                        <stop offset="50%" stop-color="blue" />
+                        <stop offset="100%" stop-color="undefined"/>
                         </linearGradient>
                         <radialGradient id="Gradient2" cx="0.5" cy="0.5" r="0.375" fx="0.75" fy="0.75" spreadMethod="repeat">
-                        <stop offset="0%" stop-color="pink" />
-                        <stop offset="100%" stop-color="green" />
+                        <stop offset="0%" stop-color="magenta" />
+                        <stop offset="100%" stop-color="blue" />
                         </radialGradient>
                         <radialGradient id="Gradient3" spreadMethod="repeat" cx="75%" cy="25%" r="33%" fx="64%" fy="18%" fr="17%">
-                        <stop offset="0%" stop-color="pink" />
-                        <stop offset="100%" stop-color="green" />
+                        <stop offset="0%" stop-color="magenta" />
+                        <stop offset="100%" stop-color="blue" />
                       </radialGradient>
-                        ></defs><circle cx="150" cy="150" r="125" fill="url(#Gradient)" stroke="blue"/><text x="150" y="185" text-anchor="middle" font-size="80" fill="red" stroke="white">jkl</text></g></svg>
+                        ></defs><circle cx="150" cy="150" r="125" fill="url(#Gradient3)" stroke="undefined"/><text x="150" y="185" text-anchor="middle" font-size="80" fill="cyan" stroke="lime">ABC</text></g></svg>

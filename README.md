@@ -103,10 +103,9 @@ https://opensource.org/licenses/MIT
 
 ## Walkthrough Video
 You can watch a walkthrough video demonstrating how to use the application and showcasing it's functionality by clicking the link below. 
-### Video example 1: original
-https://watch.screencastify.com/v/F8VOUnrzpKb4aR9cpN25
-### Video example 2: gradient
-https://watch.screencastify.com/v/nm5nkjxAZEzAKjrPJMEh
+
+### Video example
+https://watch.screencastify.com/v/PC7NdNRBSj1gmp3YUMk2
 
 
 
